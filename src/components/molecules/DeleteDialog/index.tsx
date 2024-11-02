@@ -12,16 +12,18 @@ import {
 type DeleteDialogProps = {
   onDelete?: () => void;
   disabled?: boolean;
+  className?: string;
 };
 
 export function DeleteDialogButton({
   onDelete,
   disabled = false,
+  className = "",
 }: DeleteDialogProps) {
   return (
     <ShadcnDialog>
       <DialogTrigger asChild>
-        <Button variant="outline" disabled={disabled}>
+        <Button variant="outline" disabled={disabled} className={className}>
           削除
         </Button>
       </DialogTrigger>
